@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .fade-out {
+    animation: fade-out 0.3s ease-out forwards;
+  }
+}
+
+/* 开启平滑滚动和全局背景过渡（适配深色模式切换），确保满屏 */
+html, body, #root {
+  @apply transition-colors duration-300;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
