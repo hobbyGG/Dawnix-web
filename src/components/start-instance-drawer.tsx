@@ -2,6 +2,7 @@ import { Loader2, Play, Send, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import type { FormEvent } from 'react';
 import { request } from '../lib/api';
+import { isFormTypeEnabled, isSelectFormType, type FormTypeOption } from '../lib/form-type';
 import { useNavigate } from '../router/hash-router';
 import type { Definition, FormDataItem } from '../types/workflow';
 import { useToast } from './toast';
@@ -13,6 +14,8 @@ interface StartInstanceDrawerProps {
 
 export function StartInstanceDrawer({ def, onClose }: StartInstanceDrawerProps) {
   const [formData, setFormData] = useState<Record<string, string>>({});
+  const [formTypes, setFormTypes] = useState<FormTypeOption[]>([]);
+  const [formTypesLoaded, setFormTypesLoaded] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
   const showToast = useToast();
@@ -25,12 +28,19 @@ export function StartInstanceDrawer({ def, onClose }: StartInstanceDrawerProps) 
   useEffect(() => {
     const initData: Record<string, string> = {};
     formDef.forEach((f) => {
-      if (f.type === 'select' && f.options && f.options.length > 0) {
+      if (isSelectFormType(f.type) && f.options && f.options.length > 0) {
         initData[f.id] = f.options[0];
       }
     });
     setFormData(initData);
   }, [formDef]);
+
+  useEffect(() => {
+    request('GET', '/enum/form-types')
+      .then((res) => setFormTypes(Array.isArray(res.list) ? res.list : []))
+      .catch(() => setFormTypes([]))
+      .finally(() => setFormTypesLoaded(true));
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -76,34 +86,49 @@ export function StartInstanceDrawer({ def, onClose }: StartInstanceDrawerProps) 
         <div className="flex-1 overflow-y-auto p-6 bg-[#fbfbfd] dark:bg-[#121212]">
           <form id="start-process-form" onSubmit={handleSubmit} className="space-y-5">
             {formDef.length === 0 && <div className="text-center py-10 text-gray-400 text-sm">该流程无需填写表单，可直接发起。</div>}
-            {formDef.map((field) => (
+            {formDef.map((field) => {
+              const isControlEnabled = !formTypesLoaded || isFormTypeEnabled(field.type, formTypes);
+              return (
               <div key={field.id}>
                 <label className="block text-[13px] font-medium text-gray-700 dark:text-gray-300 mb-1.5">
                   {field.label} {field.required && <span className="text-red-500 ml-1">*</span>}
                 </label>
+                {!isControlEnabled && <div className="text-[11px] text-amber-500 mb-1.5">该控件类型未在表单类型枚举中启用，已禁用输入。</div>}
                 {field.type === 'textarea' ? (
                   <textarea
-                    required={field.required}
+                    required={field.required && isControlEnabled}
+                    disabled={!isControlEnabled}
                     placeholder={field.placeholder}
                     value={formData[field.id] || ''}
                     onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
-                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 min-h-[80px]"
+                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 min-h-[80px] disabled:opacity-60 disabled:cursor-not-allowed"
                   />
                 ) : field.type === 'number' ? (
                   <input
                     type="number"
-                    required={field.required}
+                    required={field.required && isControlEnabled}
+                    disabled={!isControlEnabled}
                     placeholder={field.placeholder}
                     value={formData[field.id] || ''}
                     onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
-                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500"
+                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                   />
-                ) : field.type === 'select' ? (
-                  <select
-                    required={field.required}
+                ) : field.type === 'date' ? (
+                  <input
+                    type="date"
+                    required={field.required && isControlEnabled}
+                    disabled={!isControlEnabled}
                     value={formData[field.id] || ''}
                     onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
-                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500"
+                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
+                  />
+                ) : isSelectFormType(field.type) ? (
+                  <select
+                    required={field.required && isControlEnabled}
+                    disabled={!isControlEnabled}
+                    value={formData[field.id] || ''}
+                    onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
+                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <option value="" disabled>
                       请选择...
@@ -115,17 +140,19 @@ export function StartInstanceDrawer({ def, onClose }: StartInstanceDrawerProps) 
                     ))}
                   </select>
                 ) : (
+                  /* text_single_line / input / text 及其他文本类型 */
                   <input
                     type="text"
-                    required={field.required}
+                    required={field.required && isControlEnabled}
+                    disabled={!isControlEnabled}
                     placeholder={field.placeholder || `请输入${field.label}`}
                     value={formData[field.id] || ''}
                     onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
-                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500"
+                    className="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg p-2.5 text-[13px] outline-none focus:border-blue-500 disabled:opacity-60 disabled:cursor-not-allowed"
                   />
                 )}
               </div>
-            ))}
+            )})}
           </form>
         </div>
 

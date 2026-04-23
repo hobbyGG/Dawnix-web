@@ -24,6 +24,7 @@ import type { Dispatch, DragEvent, MouseEvent, ReactNode, SetStateAction } from 
 import { useToast } from '../components/toast';
 import ApproverSelector from '../components/approver-selector';
 import { normalizeDefinition } from '../lib/definition';
+import { isFormTypeEnabled, isSelectFormType, type FormTypeOption } from '../lib/form-type';
 import { request } from '../lib/api';
 import type { Definition, FlowEdge, FlowNode, FormField, NodeTypeOption } from '../types/workflow';
 
@@ -52,7 +53,7 @@ export default function DefinitionsManager() {
   const handleDelete = async (id: number) => {
     if (!window.confirm('确认删除该流程定义吗？')) return;
     try {
-      await request('DELETE', `/definition/${id}`);
+      await request('POST', `/definition/delete/${id}`);
       showToast('删除成功', 'success');
       fetchDefs();
     } catch (err: any) {
@@ -140,6 +141,15 @@ function DefinitionEditorView({ def, onBack }: { def: Definition | null; onBack:
   const [nodes, setNodes] = useState<FlowNode[]>(structure.nodes || []);
   const [edges, setEdges] = useState<FlowEdge[]>(structure.edges || []);
   const [saving, setSaving] = useState(false);
+  const [formTypes, setFormTypes] = useState<FormTypeOption[]>([]);
+  const [formTypesLoading, setFormTypesLoading] = useState(true);
+
+  useEffect(() => {
+    request('GET', '/enum/form-types')
+      .then((res) => setFormTypes(Array.isArray(res.list) ? res.list : []))
+      .catch(() => setFormTypes([]))
+      .finally(() => setFormTypesLoading(false));
+  }, []);
 
   const handleSave = async () => {
     if (!name || !code) return showToast('流程名称和Code不能为空', 'error');
@@ -150,7 +160,7 @@ function DefinitionEditorView({ def, onBack }: { def: Definition | null; onBack:
         await request('POST', '/definition/create', payload);
       } else {
         const id = def!.ID || def!.id;
-        await request('PUT', `/definition/${id}`, payload);
+        await request('POST', '/definition/update', { ...payload, id });
       }
       showToast('流程保存成功！', 'success');
       onBack();
@@ -188,18 +198,29 @@ function DefinitionEditorView({ def, onBack }: { def: Definition | null; onBack:
         </div>
       </div>
       <div className="flex-1 bg-white dark:bg-[#1e1e20] rounded-xl border border-gray-200/60 dark:border-gray-800 relative overflow-hidden flex shadow-sm transition-colors">
-        {activeTab === 'form' && <FormBuilder fields={formFields} setFields={setFormFields} />}
+        {activeTab === 'form' && <FormBuilder fields={formFields} setFields={setFormFields} formTypes={formTypes} formTypesLoading={formTypesLoading} />}
         {activeTab === 'flow' && <WorkflowCanvas nodes={nodes} setNodes={setNodes} edges={edges} setEdges={setEdges} />}
       </div>
     </div>
   );
 }
 
-function FormBuilder({ fields, setFields }: { fields: FormField[]; setFields: Dispatch<SetStateAction<FormField[]>> }) {
+function FormBuilder({
+  fields,
+  setFields,
+  formTypes,
+  formTypesLoading,
+}: {
+  fields: FormField[];
+  setFields: Dispatch<SetStateAction<FormField[]>>;
+  formTypes: FormTypeOption[];
+  formTypesLoading: boolean;
+}) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const addField = (type: string, label: string) => {
-    const newField: FormField = { id: `field_${Date.now()}`, type, label, required: false, options: type === 'select' ? ['选项1', '选项2'] : [] };
+    if (!isFormTypeEnabled(type, formTypes)) return;
+    const newField: FormField = { id: `field_${Date.now()}`, type, label, required: false, options: isSelectFormType(type) ? ['选项1', '选项2'] : [] };
     setFields([...fields, newField]);
     setSelectedId(newField.id);
   };
@@ -211,20 +232,28 @@ function FormBuilder({ fields, setFields }: { fields: FormField[]; setFields: Di
     if (selectedId === id) setSelectedId(null);
   };
   const selField = fields.find((f) => f.id === selectedId);
+  const isSelFieldEnabled = selField ? isFormTypeEnabled(selField.type, formTypes) : false;
 
   return (
     <div className="w-full h-full flex overflow-hidden">
       <div className="w-[200px] border-r border-gray-200/60 dark:border-gray-800 bg-gray-50/50 dark:bg-[#18181a] p-3 grid grid-cols-2 gap-2 content-start transition-colors">
         <div className="col-span-2 text-[11px] font-bold text-gray-400 dark:text-gray-500 mb-2">基础控件</div>
-        <button onClick={() => addField('input', '单行文本')} className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded text-[11px] hover:border-blue-400">
-          单行文本
-        </button>
-        <button onClick={() => addField('number', '数字')} className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded text-[11px] hover:border-blue-400">
-          数字
-        </button>
-        <button onClick={() => addField('select', '下拉选择')} className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded text-[11px] hover:border-blue-400 col-span-2">
-          下拉单选框
-        </button>
+        {formTypesLoading ? (
+          <div className="col-span-2 text-[11px] text-gray-400 dark:text-gray-500 text-center py-4">加载中...</div>
+        ) : formTypes.length === 0 ? (
+          <div className="col-span-2 text-[11px] text-gray-400 dark:text-gray-500 text-center py-4">暂无可用控件</div>
+        ) : (
+          formTypes.map((ft) => (
+            <button
+              key={ft.value}
+              onClick={() => addField(ft.value, ft.label)}
+              disabled={ft.enabled === false}
+              className={`p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded text-[11px] hover:border-blue-400 disabled:opacity-50 disabled:cursor-not-allowed ${formTypes.length % 2 !== 0 && formTypes.indexOf(ft) === formTypes.length - 1 ? 'col-span-2' : ''}`}
+            >
+              {ft.label}
+            </button>
+          ))
+        )}
       </div>
       <div className="flex-1 bg-[#f5f5f7] dark:bg-[#121212] p-8 overflow-y-auto transition-colors" onClick={() => setSelectedId(null)}>
         <div className="max-w-[500px] mx-auto bg-white dark:bg-[#1e1e20] rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-4 min-h-[400px] space-y-3">
@@ -236,8 +265,9 @@ function FormBuilder({ fields, setFields }: { fields: FormField[]; setFields: Di
               </div>
               <div className="text-[11px] text-gray-400 dark:text-gray-500 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded px-2 py-1.5 flex items-center justify-between">
                 <span>{f.type} 控件</span>
-                {f.type === 'select' && <ChevronRight size={14} className="rotate-90" />}
+                {isSelectFormType(f.type) ? <ChevronRight size={14} className="rotate-90" /> : null}
               </div>
+              {!isFormTypeEnabled(f.type, formTypes) && <div className="mt-1 text-[10px] text-amber-500">该控件类型当前未启用</div>}
               <button onClick={(e) => { e.stopPropagation(); removeField(f.id); }} className="absolute right-2 top-2 p-1 text-red-500 opacity-0 group-hover:opacity-100 bg-white dark:bg-gray-800 rounded shadow-sm border border-gray-200 dark:border-gray-700">
                 <Trash2 size={12} />
               </button>
@@ -251,7 +281,7 @@ function FormBuilder({ fields, setFields }: { fields: FormField[]; setFields: Di
           <div className="space-y-4">
             <div>
               <label className="text-[11px] text-gray-500 dark:text-gray-400 block mb-1">字段名称</label>
-              <input type="text" value={selField.label} onChange={(e) => updateField(selField.id, { label: e.target.value })} className="w-full text-[12px] bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded p-1.5 outline-none focus:border-blue-400" />
+              <input type="text" value={selField.label} disabled={!isSelFieldEnabled} onChange={(e) => updateField(selField.id, { label: e.target.value })} className="w-full text-[12px] bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded p-1.5 outline-none focus:border-blue-400 disabled:opacity-60 disabled:cursor-not-allowed" />
             </div>
             <div>
               <label className="text-[11px] text-gray-500 dark:text-gray-400 block mb-1">字段 ID (Key)</label>
@@ -259,14 +289,20 @@ function FormBuilder({ fields, setFields }: { fields: FormField[]; setFields: Di
             </div>
             <div className="flex items-center justify-between">
               <label className="text-[11px] text-gray-700 dark:text-gray-300">必填项</label>
-              <input type="checkbox" checked={selField.required} onChange={(e) => updateField(selField.id, { required: e.target.checked })} />
+              <input type="checkbox" disabled={!isSelFieldEnabled} checked={selField.required} onChange={(e) => updateField(selField.id, { required: e.target.checked })} />
             </div>
-            {selField.type === 'select' && (
+            {isSelectFormType(selField.type) && (
               <div>
                 <label className="text-[11px] text-gray-500 dark:text-gray-400 block mb-1">选项配置 (逗号分隔)</label>
-                <textarea value={(selField.options || []).join(',')} onChange={(e) => updateField(selField.id, { options: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) })} className="w-full text-[12px] bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded p-1.5 outline-none focus:border-blue-400 min-h-[60px]" />
+                <textarea
+                  value={(selField.options || []).join(',')}
+                  disabled={!isSelFieldEnabled}
+                  onChange={(e) => updateField(selField.id, { options: e.target.value.split(',').map((s) => s.trim()).filter(Boolean) })}
+                  className="w-full text-[12px] bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded p-1.5 outline-none focus:border-blue-400 min-h-[60px] disabled:opacity-60 disabled:cursor-not-allowed"
+                />
               </div>
             )}
+            {!isSelFieldEnabled && <div className="text-[11px] text-amber-500">该表单类型未在 API 枚举中启用，当前仅支持删除该控件。</div>}
           </div>
         ) : (
           <div className="text-center text-gray-400 dark:text-gray-600 text-xs mt-10">选中控件以编辑属性</div>
