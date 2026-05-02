@@ -1,0 +1,340 @@
+0 verbose cli E:\Software\Nodejs\node.exe E:\Software\Nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v25.8.0
+3 silly config load:file:E:\Software\Nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\Web\Project_1_2\Dawnix-web\.npmrc
+5 silly config load:file:C:\Users\DELL\.npmrc
+6 silly config load:file:E:\Software\Nodejs\node_global\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:E:\Web\Project_1_2\Dawnix-web\.npm-cache\_logs\2026-04-22T08_17_31_987Z-
+10 verbose logfile E:\Web\Project_1_2\Dawnix-web\.npm-cache\_logs\2026-04-22T08_17_31_987Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+15 silly reify mark retired [
+15 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\autoprefixer',
+15 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer',
+15 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer.cmd',
+15 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer.ps1'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\browserslist',
+16 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist',
+16 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist.cmd',
+16 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist.ps1'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\baseline-browser-mapping',
+17 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping',
+17 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping.cmd',
+17 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping.ps1'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\cssesc',
+18 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc',
+18 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc.cmd',
+18 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc.ps1'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\esbuild',
+19 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild',
+19 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild.cmd',
+19 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild.ps1'
+19 silly reify ]
+20 silly reify mark retired [ 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\fsevents' ]
+21 silly reify mark retired [
+21 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\jsesc',
+21 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc',
+21 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc.cmd',
+21 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc.ps1'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\json5',
+22 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5',
+22 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5.cmd',
+22 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5.ps1'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\jiti',
+23 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti',
+23 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti.cmd',
+23 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti.ps1'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\loose-envify',
+24 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify',
+24 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify.cmd',
+24 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify.ps1'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\nanoid',
+25 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid',
+25 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid.cmd',
+25 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid.ps1'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\resolve',
+26 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve',
+26 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve.cmd',
+26 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve.ps1'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\rollup',
+27 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup',
+27 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup.cmd',
+27 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup.ps1'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\semver',
+28 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver',
+28 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver.cmd',
+28 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver.ps1'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\sucrase',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase.cmd',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase.ps1',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node.cmd',
+29 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node.ps1'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\tailwindcss',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind.cmd',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind.ps1',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss.cmd',
+30 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss.ps1'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\typescript',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc.cmd',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc.ps1',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver.cmd',
+31 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver.ps1'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\update-browserslist-db',
+32 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db',
+32 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db.cmd',
+32 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db.ps1'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\vite',
+33 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite',
+33 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite.cmd',
+33 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite.ps1'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@babel\\parser',
+34 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser',
+34 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser.cmd',
+34 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser.ps1'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@esbuild\\darwin-arm64'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@rollup\\rollup-darwin-arm64'
+36 silly reify ]
+37 silly reify moves {
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\autoprefixer': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.autoprefixer-Pu22AQuT',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.autoprefixer-9BCAN2Fu',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.autoprefixer.cmd-Sgr1XcuC',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\autoprefixer.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.autoprefixer.ps1-n7iJArO6',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\browserslist': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.browserslist-9Uh8ZxLP',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.browserslist-cKoH0xnv',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.browserslist.cmd-QEwNw4U6',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\browserslist.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.browserslist.ps1-GqdcHISk',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\baseline-browser-mapping': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.baseline-browser-mapping-S4ivji7z',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.baseline-browser-mapping-SNp4Jnby',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.baseline-browser-mapping.cmd-3uAG6YxU',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\baseline-browser-mapping.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.baseline-browser-mapping.ps1-DQ1XPfoB',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\cssesc': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.cssesc-5Eo9r19V',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.cssesc-yZWbnp30',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.cssesc.cmd-tysWGpaY',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\cssesc.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.cssesc.ps1-oU1SiXNJ',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\esbuild': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.esbuild-OR7QQLiu',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.esbuild-hyniuJ9w',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.esbuild.cmd-pzey4HMU',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\esbuild.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.esbuild.ps1-jf2dTnUK',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\fsevents': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.fsevents-MLGg2iPD',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\jsesc': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.jsesc-63cLWOKb',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jsesc-nYkbUJ4i',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jsesc.cmd-7dumKJBm',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jsesc.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jsesc.ps1-cgbFg7PS',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\json5': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.json5-lP7jwZck',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.json5-HQvRWcg1',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.json5.cmd-2cVse9FM',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\json5.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.json5.ps1-MLfsQrV7',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\jiti': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.jiti-oK5QRWgX',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jiti-1vmD4Scq',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jiti.cmd-2dUefX7L',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\jiti.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.jiti.ps1-hKV29aLr',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\loose-envify': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.loose-envify-F4Ebl7i8',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.loose-envify-tp2RdOUn',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.loose-envify.cmd-Wh1eQU9z',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\loose-envify.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.loose-envify.ps1-RoNvIjD3',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\nanoid': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.nanoid-vu3JwTyp',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.nanoid-OI4pAAZQ',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.nanoid.cmd-aYbAPxJv',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\nanoid.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.nanoid.ps1-7WQTGl80',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\resolve': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.resolve-rkm71UfI',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.resolve-QTYx3hSy',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.resolve.cmd-6NO8QJHG',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\resolve.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.resolve.ps1-IUZrfv1P',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\rollup': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.rollup-Z6lMW5ex',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.rollup-xpwguJ0N',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.rollup.cmd-EOd5TALq',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\rollup.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.rollup.ps1-o9ROuWi0',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\semver': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.semver-JNiTMmgx',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.semver-98n56Lva',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.semver.cmd-1YNa6Jr8',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\semver.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.semver.ps1-IYIimtxH',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\sucrase': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.sucrase-eJhqTZYQ',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase-HYJTBXn3',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase.cmd-sm9yOS1N',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase.ps1-wUXdGg1w',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase-node-GGDXcx5X',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase-node.cmd-iO2bAL5S',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\sucrase-node.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.sucrase-node.ps1-d4qz5BBt',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\tailwindcss': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.tailwindcss-BnvXNkkt',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwind-1QkJNKql',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwind.cmd-pCfw11En',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwind.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwind.ps1-hsufSlhn',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwindcss-mSSYNd4P',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwindcss.cmd-lz7CcxZo',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tailwindcss.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tailwindcss.ps1-odtqPfl4',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\typescript': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.typescript-n62rEdZK',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsc-qRQcIppS',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsc.cmd-Q9LXUgyx',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsc.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsc.ps1-tjauORCL',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsserver-xDAepH4F',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsserver.cmd-xkXP57Nu',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\tsserver.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.tsserver.ps1-ZL2fjioh',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\update-browserslist-db': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.update-browserslist-db-rxmVofGp',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.update-browserslist-db-QOXgj8XJ',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.update-browserslist-db.cmd-cRI8MbQx',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\update-browserslist-db.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.update-browserslist-db.ps1-lo7ufm8K',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\vite': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.vite-MvEpdlL6',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.vite-Ap6sYswp',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.vite.cmd-3LKoTRI5',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\vite.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.vite.ps1-dxmXX4Oe',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@babel\\parser': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@babel\\.parser-989Qgq9c',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.parser-fDiN6cXl',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser.cmd': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.parser.cmd-sLMpGFOK',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\parser.ps1': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\.bin\\.parser.ps1-EJROThgg',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@esbuild\\darwin-arm64': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@esbuild\\.darwin-arm64-nVojMvTD',
+37 silly reify   'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@rollup\\rollup-darwin-arm64': 'E:\\Web\\Project_1_2\\Dawnix-web\\node_modules\\@rollup\\.rollup-darwin-arm64-CRXX8fuh'
+37 silly reify }
+38 http cache @rollup/rollup-win32-x64-msvc@https://registry.npmmirror.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.2.tgz 2ms (cache hit)
+39 http cache @rollup/rollup-win32-x64-gnu@https://registry.npmmirror.com/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.2.tgz 0ms (cache hit)
+40 http cache @esbuild/win32-x64@https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz 0ms (cache hit)
+41 http cache @babel/parser@https://registry.npmmirror.com/@babel/parser/-/parser-7.29.2.tgz 0ms (cache hit)
+42 http cache vite@https://registry.npmmirror.com/vite/-/vite-5.4.21.tgz 0ms (cache hit)
+43 http cache update-browserslist-db@https://registry.npmmirror.com/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 0ms (cache hit)
+44 http cache typescript@https://registry.npmmirror.com/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+45 http cache sucrase@https://registry.npmmirror.com/sucrase/-/sucrase-3.35.1.tgz 0ms (cache hit)
+46 http cache semver@https://registry.npmmirror.com/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+47 http cache rollup@https://registry.npmmirror.com/rollup/-/rollup-4.60.2.tgz 0ms (cache hit)
+48 http cache resolve@https://registry.npmmirror.com/resolve/-/resolve-1.22.12.tgz 0ms (cache hit)
+49 http cache nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+50 http cache loose-envify@https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+51 http cache jsesc@https://registry.npmmirror.com/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+52 http cache jiti@https://registry.npmmirror.com/jiti/-/jiti-1.21.7.tgz 0ms (cache hit)
+53 http cache json5@https://registry.npmmirror.com/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+54 http cache cssesc@https://registry.npmmirror.com/cssesc/-/cssesc-3.0.0.tgz 0ms (cache hit)
+55 http cache esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.21.5.tgz 0ms (cache hit)
+56 http cache tailwindcss@https://registry.npmmirror.com/tailwindcss/-/tailwindcss-3.4.19.tgz 0ms (cache hit)
+57 silly tarball no local data for @rollup/rollup-win32-x64-msvc@https://registry.npmmirror.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.60.2.tgz. Extracting by manifest.
+58 silly tarball no local data for @rollup/rollup-win32-x64-gnu@https://registry.npmmirror.com/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.60.2.tgz. Extracting by manifest.
+59 silly tarball no local data for @esbuild/win32-x64@https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.21.5.tgz. Extracting by manifest.
+60 http cache baseline-browser-mapping@https://registry.npmmirror.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.20.tgz 0ms (cache hit)
+61 http cache browserslist@https://registry.npmmirror.com/browserslist/-/browserslist-4.28.2.tgz 0ms (cache hit)
+62 silly tarball no local data for @babel/parser@https://registry.npmmirror.com/@babel/parser/-/parser-7.29.2.tgz. Extracting by manifest.
+63 silly tarball no local data for vite@https://registry.npmmirror.com/vite/-/vite-5.4.21.tgz. Extracting by manifest.
+64 http cache autoprefixer@https://registry.npmmirror.com/autoprefixer/-/autoprefixer-10.5.0.tgz 0ms (cache hit)
+65 silly tarball no local data for update-browserslist-db@https://registry.npmmirror.com/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz. Extracting by manifest.
+66 silly tarball no local data for typescript@https://registry.npmmirror.com/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+67 silly tarball no local data for sucrase@https://registry.npmmirror.com/sucrase/-/sucrase-3.35.1.tgz. Extracting by manifest.
+68 silly tarball no local data for semver@https://registry.npmmirror.com/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+69 silly tarball no local data for rollup@https://registry.npmmirror.com/rollup/-/rollup-4.60.2.tgz. Extracting by manifest.
+70 silly tarball no local data for resolve@https://registry.npmmirror.com/resolve/-/resolve-1.22.12.tgz. Extracting by manifest.
+71 silly tarball no local data for nanoid@https://registry.npmmirror.com/nanoid/-/nanoid-3.3.11.tgz. Extracting by manifest.
+72 silly tarball no local data for loose-envify@https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+73 silly tarball no local data for jsesc@https://registry.npmmirror.com/jsesc/-/jsesc-3.1.0.tgz. Extracting by manifest.
+74 silly tarball no local data for jiti@https://registry.npmmirror.com/jiti/-/jiti-1.21.7.tgz. Extracting by manifest.
+75 silly tarball no local data for json5@https://registry.npmmirror.com/json5/-/json5-2.2.3.tgz. Extracting by manifest.
+76 silly tarball no local data for cssesc@https://registry.npmmirror.com/cssesc/-/cssesc-3.0.0.tgz. Extracting by manifest.
+77 silly tarball no local data for esbuild@https://registry.npmmirror.com/esbuild/-/esbuild-0.21.5.tgz. Extracting by manifest.
+78 silly tarball no local data for tailwindcss@https://registry.npmmirror.com/tailwindcss/-/tailwindcss-3.4.19.tgz. Extracting by manifest.
+79 silly tarball no local data for baseline-browser-mapping@https://registry.npmmirror.com/baseline-browser-mapping/-/baseline-browser-mapping-2.10.20.tgz. Extracting by manifest.
+80 silly tarball no local data for browserslist@https://registry.npmmirror.com/browserslist/-/browserslist-4.28.2.tgz. Extracting by manifest.
+81 silly tarball no local data for autoprefixer@https://registry.npmmirror.com/autoprefixer/-/autoprefixer-10.5.0.tgz. Extracting by manifest.
+82 http fetch GET 200 https://cdn.npmmirror.com/packages/update-browserslist-db/1.2.3/update-browserslist-db-1.2.3.tgz 517ms (cache miss)
+83 http fetch GET 200 https://cdn.npmmirror.com/packages/loose-envify/1.4.0/loose-envify-1.4.0.tgz 523ms (cache miss)
+84 http fetch GET 200 https://cdn.npmmirror.com/packages/jsesc/3.1.0/jsesc-3.1.0.tgz 533ms (cache miss)
+85 http fetch GET 200 https://cdn.npmmirror.com/packages/esbuild/0.21.5/esbuild-0.21.5.tgz 705ms (cache miss)
+86 http fetch GET 200 https://cdn.npmmirror.com/packages/browserslist/4.28.2/browserslist-4.28.2.tgz 697ms (cache miss)
+87 http fetch GET 200 https://cdn.npmmirror.com/packages/semver/6.3.1/semver-6.3.1.tgz 720ms (cache miss)
+88 http fetch GET 200 https://cdn.npmmirror.com/packages/cssesc/3.0.0/cssesc-3.0.0.tgz 781ms (cache miss)
+89 http fetch GET 200 https://cdn.npmmirror.com/packages/baseline-browser-mapping/2.10.20/baseline-browser-mapping-2.10.20.tgz 800ms (cache miss)
+90 http fetch GET 200 https://cdn.npmmirror.com/packages/nanoid/3.3.11/nanoid-3.3.11.tgz 839ms (cache miss)
+91 http fetch GET 200 https://cdn.npmmirror.com/packages/json5/2.2.3/json5-2.2.3.tgz 865ms (cache miss)
+92 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/parser/7.29.2/parser-7.29.2.tgz 917ms (cache miss)
+93 http fetch GET 200 https://cdn.npmmirror.com/packages/rollup/4.60.2/rollup-4.60.2.tgz 1090ms (cache miss)
+94 http fetch GET 200 https://cdn.npmmirror.com/packages/jiti/1.21.7/jiti-1.21.7.tgz 1211ms (cache miss)
+95 http fetch GET 200 https://registry.npmmirror.com/npm 1678ms
+96 http fetch GET 200 https://cdn.npmmirror.com/packages/autoprefixer/10.5.0/autoprefixer-10.5.0.tgz 1258ms (cache miss)
+97 http fetch GET 200 https://cdn.npmmirror.com/packages/resolve/1.22.12/resolve-1.22.12.tgz 1368ms (cache miss)
+98 http fetch GET 200 https://cdn.npmmirror.com/packages/sucrase/3.35.1/sucrase-3.35.1.tgz 1686ms (cache miss)
+99 http fetch GET 200 https://cdn.npmmirror.com/packages/vite/5.4.21/vite-5.4.21.tgz 1915ms (cache miss)
+100 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-msvc/4.60.2/rollup-win32-x64-msvc-4.60.2.tgz 2303ms (cache miss)
+101 http fetch GET 200 https://cdn.npmmirror.com/packages/tailwindcss/3.4.19/tailwindcss-3.4.19.tgz 3119ms (cache miss)
+102 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rollup/rollup-win32-x64-gnu/4.60.2/rollup-win32-x64-gnu-4.60.2.tgz 3344ms (cache miss)
+103 http fetch GET 200 https://cdn.npmmirror.com/packages/typescript/5.9.3/typescript-5.9.3.tgz 10933ms (cache miss)
+104 http fetch GET 200 https://cdn.npmmirror.com/packages/%40esbuild/win32-x64/0.21.5/win32-x64-0.21.5.tgz 13763ms (cache miss)
+105 info run esbuild@0.21.5 postinstall node_modules/esbuild node install.js
+106 info run esbuild@0.21.5 postinstall { code: 0, signal: null }
+107 silly ADD node_modules/@rollup/rollup-win32-x64-msvc
+108 silly ADD node_modules/@rollup/rollup-win32-x64-gnu
+109 silly ADD node_modules/@esbuild/win32-x64
+110 silly REMOVE node_modules/@rollup/rollup-darwin-arm64
+111 silly REMOVE node_modules/@esbuild/darwin-arm64
+112 silly CHANGE node_modules/@babel/parser
+113 silly CHANGE node_modules/vite
+114 silly CHANGE node_modules/update-browserslist-db
+115 silly CHANGE node_modules/typescript
+116 silly CHANGE node_modules/tailwindcss
+117 silly CHANGE node_modules/sucrase
+118 silly CHANGE node_modules/semver
+119 silly CHANGE node_modules/rollup
+120 silly CHANGE node_modules/resolve
+121 silly CHANGE node_modules/nanoid
+122 silly CHANGE node_modules/loose-envify
+123 silly CHANGE node_modules/jiti
+124 silly CHANGE node_modules/json5
+125 silly CHANGE node_modules/jsesc
+126 silly REMOVE node_modules/fsevents
+127 silly CHANGE node_modules/esbuild
+128 silly CHANGE node_modules/cssesc
+129 silly CHANGE node_modules/baseline-browser-mapping
+130 silly CHANGE node_modules/browserslist
+131 silly CHANGE node_modules/autoprefixer
+132 verbose cwd E:\Web\Project_1_2\Dawnix-web
+133 verbose os Windows_NT 10.0.26200
+134 verbose node v25.8.0
+135 verbose npm  v11.11.0
+136 notice
+136 notice New [33mminor[39m version of npm available! [33m11.11.0[39m -> [34m11.12.1[39m
+136 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.12.1[39m
+136 notice To update run: [4mnpm install -g npm@11.12.1[24m
+136 notice  { force: true, Symbol(proc-log.meta): true }
+137 verbose exit 0
+138 info ok
