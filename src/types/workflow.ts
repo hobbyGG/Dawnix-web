@@ -61,6 +61,29 @@ export interface TimelineRecord {
   time: string;
 }
 
+export interface ApprovalRecord {
+  ID?: number;
+  id?: number;
+  InstanceID?: number;
+  instance_id?: number;
+  TaskID?: number;
+  task_id?: number;
+  NodeID?: string;
+  node_id?: string;
+  NodeName?: string;
+  node_name?: string;
+  ApproverUID?: string;
+  approver_uid?: string;
+  ApproverName?: string;
+  approver_name?: string;
+  Action?: 'agree' | 'reject' | string;
+  action?: 'agree' | 'reject' | string;
+  Comment?: string;
+  comment?: string;
+  CreatedAt?: string;
+  created_at?: string;
+}
+
 export interface Task {
   ID?: number;
   id?: number;

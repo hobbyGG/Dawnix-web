@@ -1,4 +1,4 @@
-import { Bell, CheckSquare, GitBranch, LayoutDashboard, LogOut, Moon, PanelLeft, PlayCircle, Sun } from 'lucide-react';
+import { Bell, CheckSquare, GitBranch, History, LayoutDashboard, LogOut, Moon, PanelLeft, PlayCircle, Sun } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import type { Dispatch, SetStateAction } from 'react';
 import { getStoredUserInfo } from '../lib/user';
@@ -7,6 +7,7 @@ import type { UserInfo } from '../types/workflow';
 import DashboardView from '../views/dashboard-view';
 import DefinitionsManager from '../views/definitions-manager';
 import InstancesView, { InstanceDetailView } from '../views/instances-view';
+import RecordsView from '../views/records-view';
 import TasksView from '../views/tasks-view';
 
 interface AppLayoutProps {
@@ -23,6 +24,7 @@ export default function AppLayout({ onLogout, isDarkMode, setIsDarkMode }: AppLa
     '/definitions': '流程定义管理',
     '/instances': '流程实例监控',
     '/tasks': '任务中心',
+    '/records': '审批历史',
   };
   const currentTitle = location.pathname.startsWith('/instances/') ? '流程实例详情' : viewTitles[location.pathname] || 'Dawnix';
 
@@ -45,6 +47,7 @@ export default function AppLayout({ onLogout, isDarkMode, setIsDarkMode }: AppLa
             <Route path="/instances/:instanceId" element={<InstanceDetailView />} />
             <Route path="/instances" element={<InstancesView />} />
             <Route path="/tasks" element={<TasksView />} />
+            <Route path="/records" element={<RecordsView />} />
           </Routes>
         </main>
       </div>
@@ -66,6 +69,7 @@ function Sidebar({ isCollapsed, onLogout }: { isCollapsed: boolean; onLogout: ()
     { path: '/definitions', label: '流程定义', icon: <GitBranch size={18} /> },
     { path: '/instances', label: '流程实例', icon: <PlayCircle size={18} /> },
     { path: '/tasks', label: '任务管理', icon: <CheckSquare size={18} /> },
+    { path: '/records', label: '审批历史', icon: <History size={18} /> },
   ];
 
   return (

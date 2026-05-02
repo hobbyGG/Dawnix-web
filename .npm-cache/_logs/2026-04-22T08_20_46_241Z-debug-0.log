@@ -1,0 +1,12 @@
+0 verbose cli E:\Software\Nodejs\node.exe E:\Software\Nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.11.0
+2 info using node@v25.8.0
+3 silly config load:file:E:\Software\Nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\Web\Project_1_2\Dawnix-web\.npmrc
+5 silly config load:file:C:\Users\DELL\.npmrc
+6 silly config load:file:E:\Software\Nodejs\node_global\etc\npmrc
+7 verbose title npm run dev --host 0.0.0.0
+8 verbose argv "run" "dev" "--" "--host" "0.0.0.0"
+9 verbose logfile logs-max:10 dir:E:\Web\Project_1_2\Dawnix-web\.npm-cache\_logs\2026-04-22T08_20_46_241Z-
+10 verbose logfile E:\Web\Project_1_2\Dawnix-web\.npm-cache\_logs\2026-04-22T08_20_46_241Z-debug-0.log
+11 silly logfile done cleaning log files
